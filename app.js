@@ -114,6 +114,7 @@ function onGetResponse(err, res) {
 
   if (!res.articles.length) {
     // show empty message
+    M.toast({ html: "No news found" });
     return;
   }
 
@@ -137,7 +138,7 @@ function renderNews(news) {
   newsContainer.insertAdjacentHTML("afterbegin", fragment);
 }
 
-// Clear using container function
+// Clear being used container function
 function clearContainer(container) {
   let child = container.lastElementChild;
   while (child) {
@@ -190,3 +191,6 @@ function removePreloader() {
     loader.remove();
   }
 }
+
+//Show empty alert
+function showEmptyAlert() {}
