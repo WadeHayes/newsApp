@@ -53,6 +53,7 @@ function customHttp() {
     }
   };
 }
+
 // Init http module
 const http = customHttp();
 
